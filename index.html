@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Sena - Gerador Inteligente</title>
+    <meta name="description" content="Gerador de números da Mega Sena baseado em estatísticas reais.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-glow"></div>
+    <main class="app-container">
+        <header>
+            <div class="logo">
+                <span class="icon">Sr</span>
+                <h1>Mega Sena <span class="highlight">Stats</span></h1>
+            </div>
+            <p class="subtitle">Gerador baseado em histórico estatístico</p>
+        </header>
+
+        <section class="stats-overview" id="stats-loading">
+            <div class="loader"></div>
+            <p>Analisando histórico de sorteios...</p>
+        </section>
+
+        <section class="stats-dashboard hidden" id="stats-dashboard">
+            <div class="stat-card hot">
+                <h3>🔥 Mais Sorteados</h3>
+                <div class="numbers-row" id="hot-numbers"></div>
+            </div>
+            <div class="stat-card cold">
+                <h3>🧊 Menos Sorteados</h3>
+                <div class="numbers-row" id="cold-numbers"></div>
+            </div>
+            <div class="stat-card overdue">
+                <h3>⏰ Mais Atrasados</h3>
+                <div class="numbers-row" id="overdue-numbers"></div>
+            </div>
+        </section>
+
+        <section class="generator-section">
+            <div class="controls">
+                <label class="toggle-switch">
+                    <input type="checkbox" id="mode-toggle">
+                    <span class="slider"></span>
+                    <span class="label-text">Priorizar Estatísticas</span>
+                </label>
+            </div>
+            
+            <div class="result-display" id="result-container">
+                <div class="placeholder-text">Clique em Gerar para começar</div>
+            </div>
+
+            <button id="generate-btn" class="cta-button" disabled>
+                <span class="icon">✨</span> Gerar Jogo
+            </button>
+        </section>
+
+        <footer>
+            <p>Dados atualizados via GitHub/guilhermeasn</p>
+        </footer>
+    </main>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
